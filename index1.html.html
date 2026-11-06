@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Class 8, 9 & 10 | Math, Science & Social Studies</title>
+
+    <meta name="description" content="Live and recorded classes for Class 8, 9 and 10 students covering Compulsory Mathematics, Optional Mathematics, Science and Social Studies with simple, clear and quality teaching.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f8ff;
+            color: #172033;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #172554, #2563eb);
+            color: white;
+            padding: 22px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .nav-btn {
+            color: white;
+            border: 1px solid rgba(255,255,255,0.5);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #172554 0%, #2563eb 60%, #38bdf8 100%);
+            color: white;
+            padding: 75px 0 90px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 45px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            max-width: 760px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 480px;
+            margin-left: auto;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: 8px 15px;
+            border-radius: 999px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 4rem);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            max-width: 700px;
+            color: #e0f2fe;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 13px 21px;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: 0.25s;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #1d4ed8;
+        }
+
+        .btn-whatsapp {
+            background: #22c55e;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title span {
+            color: #2563eb;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            margin-top: 7px;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: 10px auto 0;
+            color: #64748b;
+        }
+
+        /* Services */
+        .services {
+            background: white;
+        }
+
+        .services-image {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(15, 23, 42, 0.12);
+        }
+
+        .services-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 30px 24px;
+            border-radius: 18px;
+            transition: 0.25s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #93c5fd;
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.1);
+        }
+
+        .icon {
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #dbeafe;
+            border-radius: 15px;
+            font-size: 1.8rem;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .service-card p {
+            color: #64748b;
+        }
+
+        /* Why Choose Us */
+        .why {
+            background: #eff6ff;
+        }
+
+        .why-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(15, 23, 42, 0.12);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .why-box {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #dbeafe;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+        }
+
+        .reason {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 23px;
+        }
+
+        .reason:last-child {
+            margin-bottom: 0;
+        }
+
+        .check {
+            min-width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #dcfce7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #15803d;
+            font-weight: bold;
+        }
+
+        .reason h3 {
+            font-size: 1.05rem;
+            margin-bottom: 3px;
+        }
+
+        .reason p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        .teacher-card {
+            background: linear-gradient(145deg, #172554, #1d4ed8);
+            color: white;
+            padding: 40px;
+            border-radius: 24px;
+        }
+
+        .teacher-card .big-icon {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        .teacher-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+
+        .teacher-card p {
+            color: #dbeafe;
+        }
+
+        /* Location */
+        .location {
+            background: white;
+        }
+
+        .location-card {
+            max-width: 750px;
+            margin: auto;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 35px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .location-icon {
+            font-size: 3rem;
+            background: #dbeafe;
+            min-width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+        }
+
+        .location-card h3 {
+            margin-bottom: 5px;
+        }
+
+        .location-card p {
+            color: #64748b;
+        }
+
+        /* Contact */
+        .contact {
+            background: linear-gradient(135deg, #172554, #1d4ed8);
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            margin-bottom: 10px;
+        }
+
+        .contact p {
+            color: #dbeafe;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 28px;
+        }
+
+        .contact-btn {
+            min-width: 190px;
+            padding: 15px 22px;
+            border-radius: 10px;
+            font-weight: 700;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .phone {
+            background: white;
+            color: #1d4ed8;
+        }
+
+        .whatsapp {
+            background: #22c55e;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 800px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                max-width: 650px;
+                margin: 0 auto;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .why-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-btn {
+                display: none;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .hero {
+                padding: 60px 0 70px;
+            }
+
+            .hero-image {
+                border-radius: 18px;
+            }
+
+            .services-image {
+                border-radius: 18px;
+            }
+
+            .about-image {
+                border-radius: 18px;
+            }
+
+            .location-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 28px 20px;
+            }
+
+            .teacher-card {
+                padding: 30px 24px;
+            }
+
+            .hero-buttons,
+            .contact-buttons {
+                flex-direction: column;
+            }
+
+            .btn,
+            .contact-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">📚 Class 8 • 9 • 10</div>
+            <a href="#contact" class="nav-btn">Contact Us</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <div class="badge">
+                        📖 Simple • Clear • Quality Education
+                    </div>
+
+                    <h1>
+                        Learn Smarter.<br>
+                        Understand Better.
+                    </h1>
+
+                    <p>
+                        Live and recorded classes for Class 8, 9 and 10 students,
+                        covering Compulsory Mathematics, Optional Mathematics,
+                        Science and Social Studies at an affordable cost.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="tel:9860247435" class="btn btn-primary">
+                            📞 Call Now
+                        </a>
+
+                        <a href="https://wa.me/9779860247435"
+                           class="btn btn-whatsapp">
+                            💬 WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-image">
+                    <img
+                        src="images/picture three.jpg"
+                        alt="Tutor teaching students in an online class"
+                        fetchpriority="high">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Our Services</span>
+
+                <h2>Subjects We Teach</h2>
+
+                <p>
+                    Learn important concepts through clear explanations,
+                    structured lessons and practical problem-solving.
+                </p>
+
+            </div>
+
+            <div class="services-image">
+                <img
+                    src="images/picture one.jpg"
+                    alt="Student clearing doubts during a class"
+                    loading="lazy"
+                    decoding="async">
+            </div>
+
+            <div class="service-grid">
+
+                <div class="service-card">
+
+                    <div class="icon">📐</div>
+
+                    <h3>Compulsory Mathematics</h3>
+
+                    <p>
+                        Build strong mathematical fundamentals and learn
+                        step-by-step methods for solving different types
+                        of problems.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="icon">🧮</div>
+
+                    <h3>Optional Mathematics</h3>
+
+                    <p>
+                        Understand concepts logically instead of simply
+                        memorizing formulas and methods.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="icon">🔬</div>
+
+                    <h3>Science</h3>
+
+                    <p>
+                        Understand difficult scientific and physical
+                        concepts through simple and visual explanations.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="icon">🌍</div>
+
+                    <h3>Social Studies</h3>
+
+                    <p>
+                        Study important topics through simple, organized
+                        and student-friendly explanations.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="icon">🎥</div>
+
+                    <h3>Live Classes</h3>
+
+                    <p>
+                        Learn directly with the teacher, ask questions
+                        and interact during the class.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="icon">▶️</div>
+
+                    <h3>Recorded Lectures</h3>
+
+                    <p>
+                        Learn at your own pace and revisit lessons whenever
+                        you need additional practice or revision.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Why Choose Us / About Us -->
+    <section class="why" id="why">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Why Choose Us</span>
+
+                <h2>Education Focused on Understanding</h2>
+
+                <p>
+                    We focus on building strong fundamentals and helping
+                    students overcome their learning gaps.
+                </p>
+
+            </div>
+
+
+            <div class="why-content">
+
+                <div class="about-image">
+                    <img
+                        src="images/picture two.jpg"
+                        alt="Students taking an educational class"
+                        loading="lazy"
+                        decoding="async">
+                </div>
+
+
+                <div class="why-box">
+
+                    <div class="reason">
+
+                        <div class="check">✓</div>
+
+                        <div>
+
+                            <h3>Step-by-Step Learning</h3>
+
+                            <p>
+                                Complex Mathematics and Science concepts are
+                                broken down into simple and logical steps.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reason">
+
+                        <div class="check">✓</div>
+
+                        <div>
+
+                            <h3>Visual Teaching</h3>
+
+                            <p>
+                                Digital canvas teaching makes formulas,
+                                geometric figures and physical concepts
+                                easier to understand.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reason">
+
+                        <div class="check">✓</div>
+
+                        <div>
+
+                            <h3>Focus on Student Weaknesses</h3>
+
+                            <p>
+                                Teaching is designed around common learning
+                                gaps and the areas where students need more
+                                support.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reason">
+
+                        <div class="check">✓</div>
+
+                        <div>
+
+                            <h3>Concept-Based Education</h3>
+
+                            <p>
+                                Students are encouraged to understand the
+                                reason behind a formula or solution instead
+                                of depending only on memorization.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div style="margin-top: 35px;">
+
+                <div class="teacher-card">
+
+                    <div class="big-icon">👨‍🏫</div>
+
+                    <h2>Teaching Experience</h2>
+
+                    <p>
+                        With 5 years of teaching experience in Class 8, 9
+                        and 10 and experience teaching students from different
+                        schools, we understand common student difficulties,
+                        weak areas and learning needs.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Location -->
+    <section class="location" id="location">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Our Location</span>
+
+                <h2>Where We Are Located</h2>
+
+            </div>
+
+
+            <div class="location-card">
+
+                <div class="location-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <h3>Kathmandu, Balaju</h3>
+
+                    <p>
+                        For information about classes, subjects and
+                        enrollment, please contact us by phone or WhatsApp.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <h2>Ready to Start Learning? 📚</h2>
+
+            <p>
+                Contact us for more information about our live classes
+                and recorded lectures.
+            </p>
+
+
+            <div class="contact-buttons">
+
+                <a href="tel:9860247435"
+                   class="contact-btn phone">
+                    📞 9860247435
+                </a>
+
+
+                <a href="https://wa.me/9779860247435"
+                   class="contact-btn whatsapp">
+                    💬 Contact on WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    © Class 8 • 9 • 10 — Mathematics, Science & Social Studies
+</footer>
+
+</body>
+</html>
